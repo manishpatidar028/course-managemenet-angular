@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CATEGORY } from 'src/app/common/apiRoutes';
+import { CATEGORY, CONTENT } from 'src/app/common/apiRoutes';
 import { ERROR_MESSAGE } from 'src/app/common/errorMessage';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { FormService } from 'src/app/shared/services/form.service';
@@ -69,12 +69,14 @@ export class AddEditContentComponent implements OnInit {
     this.formService.markFormGroupTouched(this.form);
     if (this.form.valid) {
       const requestBody = this.form.value;
+      requestBody.category = +requestBody.category;
       console.log(requestBody);
+      this.apiService.startLoader();
+      const result: any = await this.apiService.post(CONTENT.ADD, requestBody);
+      console.log(result);
 
-      // this.apiService.startLoader();
-      // // const result: any = await this.apiService.post(CATEGORY.ADD, requestBody);
-      // // this.apiService.success(result.message);
-      // this.router.navigate(['/content']);
+      this.apiService.success(result.message);
+      this.router.navigate(['/content']);
     }
   }
 }
