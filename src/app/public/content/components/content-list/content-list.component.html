@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="head">
+        <h3>Content List</h3>
+        <a [routerLink]="['add']" class="btn btn-primary">Add Content</a>
+    </div>
+    <div class="wrapper">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body" *ngFor="let item of content">
+                <h5 class="card-title">{{item.categoryName}}</h5>
+                <p class="card-text">{{item.description}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <form [formGroup]="form">
+                <div class="form-group">
+                    <label class="my-2" for="Category">Category</label>
+                    <select class="form-control" formControlName="category">
+                        <option value="" disabled="true">Select category</option>
+                        <option *ngFor="let item of categoryList" [value]="item.id">
+                            {{item.name}}
+                        </option>
+                    </select>
+                    <app-validation-message [control]="form.controls['category']" [messages]="messageList.category">
+                    </app-validation-message>
+                </div>
+                <div class="form-group">
+                    <label class="my-2" for="content">Content</label>
+                    <input type="body" id="content" placeholder="Enter your content" class="form-control"
+                        formControlName="content" required />
+                    <app-validation-message [control]="form.controls['content']" [messages]="messageList.content">
+                    </app-validation-message>
+                </div>
+                <div class="form-group my-2">
+                    <button class="btn btn-primary" type="submit" (click)="submit()">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+'

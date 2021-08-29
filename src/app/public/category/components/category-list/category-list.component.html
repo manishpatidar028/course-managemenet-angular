@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="head">
+        <h3>Category List</h3>
+        <a [routerLink]="['add']" class="btn btn-primary">Add Category</a>
+    </div>
+    <div class="wrapper" *ngIf="categoryList">
+        <div class="card" style="width: 18rem;" *ngFor="let item of categoryList">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper" *ngIf="!categoryList">Please add category</div>
+</div>

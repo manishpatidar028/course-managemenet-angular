@@ -1,0 +1,166 @@
+input:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+.f-right {
+    float: right;
+}
+
+ul {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+    padding: 25px 22px;
+    display: block;
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+
+ul li a {
+    padding: 25px 13px;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex!important;
+}
+
+.header-right {
+    list-style: none;
+    float: none !important;
+    margin-top: 20px;
+}
+
+.header-right li {
+    padding-left: 14px;
+}
+
+.header-right li:nth-child(1) {
+    width: 100%;
+}
+
+.header-right .form-box {
+    position: relative;
+    width: 85%;
+}
+
+.header-right .form-box input {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.header-right .form-box .search-icon {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+}
+
+.header-right .form-box .search-icon i {
+    color: #6c6a6a;
+    cursor: pointer;
+}
+
+#navigation .btn {
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.header.header-sticky {
+    background-color: #243e77;
+}
+
+.headerMenu.open {
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#navigation {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width:551px) {
+    .fix-card .header-right {
+        float: left !important;
+        padding-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .logo {
+        padding-top: 7px;
+    }
+    .fix-card .header-right>li {
+        display: block;
+        padding: 0;
+    }
+    .fix-card .header-right>li .form-box {
+        float: left !important;
+        width: 100%;
+    }
+    .fix-card .header-right>li .form-box input {
+        border-radius: 14px;
+        padding: 8px 20px;
+    }
+}
+
+.dropdown {
+    width: 72%;
+    /* background: #fff; */
+    position: absolute;
+    top: 66px;
+    left: 25%;
+    z-index: 5;
+    border-radius: 8px;
+    border: none;
+}
+
+option {
+    padding: 8px;
+    border: 1px solid #efefef;
+    background: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.dropdown-option:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
+
+.logo:focus {
+    color: #fff
+}
+
+.logo h1 {
+    color: #fff;
+}
+
+.logo {
+    padding: 0.5em 4em;
+}

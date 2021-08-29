@@ -1,0 +1,24 @@
+// .form-group.mr-2 {
+//     margin-top: 1em;
+// }
+
+// .head {
+//     display: flex;
+//     justify-content: space-around;
+// }
+.bg-transparent {
+    background-color: transparent;
+  }
+  
+  :host {
+    height: 100%;
+  }
+  
+  .photo {
+    object-fit: contain;
+  }
+  
+  .card {
+    width: 20rem;
+    margin: 0 auto;
+  }
